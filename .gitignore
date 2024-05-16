@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+
+# IDE specific
+.idea/
+.vscode/
+
+# Logs
+logs
+*.log
+Yarn-error.log
+
+.DS_Store

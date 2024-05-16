@@ -1,0 +1,28 @@
+{
+  "name": "aes.js",
+  "version": "0.0.1",
+  "description": "AES implementation on JS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/42proger/aes.js.git"
+  },
+  "devDependencies": {
+    "rollup": "^4.17.2"
+  },
+  "keywords": [
+    "aes",
+    "encrypt",
+    "cipher"
+  ],
+  "author": "42proger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/42proger/aes.js/issues"
+  },
+  "homepage": "https://github.com/42proger/aes.js#readme"
+}
