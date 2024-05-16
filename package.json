@@ -12,6 +12,7 @@
     "url": "git+https://github.com/42proger/aes.js.git"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.17.2"
   },
   "keywords": [

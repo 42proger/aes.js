@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Encryption Standard (AES) on JavaScript</title>
+    <link rel="icon" href="../src/assets/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  </head>
+
+  <body class="p-4">
+    <div class="container mb-6">
+      <h1 class="title has-text-centered is-size-1-desktop my-3">AES Implementation on JS</h1>
+
+      <div class="columns is-centered">
+      <div class="column field">
+        <label class="label" for="password">Password</label>
+        <div class="control">
+          <input id="password" type="text" class="input" placeholder="Your password" value="qwerty" />
+        </div>
+      </div>
+
+      <div class="column is-one-quarter field">
+        <label class="label" for="aesVersion">Version</label>
+        <div class="control">
+          <div class="select">
+            <select id="aesVersion">
+              <option value="128">AES-128</option>
+              <option value="192">AES-192</option>
+              <option value="256" selected>AES-256</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div id="plaintextDiv" class="column">
+        <div class="panel">
+          <p class="panel-heading has-text-centered">Plain text</p>
+          <div class="panel-block">
+            <textarea id="plainTextInput" class="textarea" rows="8" placeholder="Your text">Hello World!</textarea>
+          </div>
+          <div class="panel-block">
+            <div class="buttons has-addons mx-auto">
+              <button id="clearPlaintext" class="button">Clear</button>
+              <button id="copyPlaintext" class="button">Copy</button>
+              <button id="pastePlaintext" class="button">Paste</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered is-one-fifth buttons are-medium is-align-self-center">
+        <button id="encryptBtn" class="button is-link m-2">Encrypt</button>
+        <button id="decryptBtn" class="button is-link m-2">Decrypt</button>
+      </div>
+
+      <div id="cipherDiv" class="column">
+        <div class="panel">
+          <p class="panel-heading has-text-centered">Cipher</p>
+          <div class="panel-block">
+            <textarea id="cipherTextInput" class="textarea" rows="8"></textarea>
+          </div>
+          <div class="panel-block">
+            <div class="buttons has-addons mx-auto">
+              <button id="clearCipher" class="button">Clear</button>
+              <button id="copyCipher" class="button">Copy</button>
+              <button id="pasteCipher" class="button">Paste</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+
+    <a href="https://github.com/42proger/aes.js" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+  </body>
+</html>

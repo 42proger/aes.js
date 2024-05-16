@@ -12,7 +12,17 @@ const cipher = (input, w) => {
 
   // Perform round operations
   for (let round = 0; round <= Nr; round++) {
-    state = addRoundKey(mixColumns(shiftRows(subBytes(state), Nb), Nb), w, round, Nb);
+    console.log(`Round ${round}.`, 'Before:', state);
+    state = subBytes(state);
+    console.log('After subBytes:', state);
+    state = shiftRows(state, Nb);
+    console.log('After shiftRows:', state);
+    if (round < Nr) {
+      state = mixColumns(state, Nb);
+      console.log('After mixColumns:', state);
+    }
+    state = addRoundKey(state, w, round, Nb);
+    console.log('After addRoundKey:', state);
   }
 
   return state.flat();
